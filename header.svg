@@ -1,0 +1,88 @@
+<svg width="860" height="200" viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#12121a"/>
+      <stop offset="100%" style="stop-color:#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff">
+        <animate attributeName="stop-color" values="#ffffff;#7c3aed;#06b6d4;#ffffff" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#f59e0b;#ffffff;#06b6d4" dur="5s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="200" rx="16" fill="url(#bg)"/>
+
+  <!-- Animated border -->
+  <rect width="856" height="196" rx="14" x="2" y="2" fill="none" stroke="url(#titleGrad)" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="stroke-dasharray" values="0 2200;2200 0;0 2200" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Stars -->
+  <circle cx="50" cy="30" r="1.5" fill="#a78bfa" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/></circle>
+  <circle cx="120" cy="60" r="1" fill="#67e8f9" opacity="0.3"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="780" cy="25" r="1.5" fill="#fbbf24" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="820" cy="80" r="1" fill="#a78bfa" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.9s" repeatCount="indefinite"/></circle>
+  <circle cx="800" cy="150" r="1.5" fill="#67e8f9" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
+  <circle cx="40" cy="160" r="1" fill="#fbbf24" opacity="0.3"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="200" cy="20" r="1" fill="#f9a8d4" opacity="0.35"><animate attributeName="opacity" values="0.35;0.85;0.35" dur="4.1s" repeatCount="indefinite"/></circle>
+  <circle cx="660" cy="170" r="1.5" fill="#86efac" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.7s" repeatCount="indefinite"/></circle>
+
+  <!-- Orbit ring -->
+  <ellipse cx="430" cy="100" rx="320" ry="70" fill="none" stroke="#7c3aed" stroke-width="0.5" opacity="0.15" stroke-dasharray="8 6">
+    <animateTransform attributeName="transform" type="rotate" from="0 430 100" to="360 430 100" dur="20s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Avatar circle -->
+  <circle cx="100" cy="100" r="55" fill="#1a1a26" stroke="url(#titleGrad)" stroke-width="2">
+    <animate attributeName="r" values="55;57;55" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="100" y="115" text-anchor="middle" font-size="42" filter="url(#glow)">
+    👨‍💻
+    <animate attributeName="font-size" values="42;44;42" dur="3s" repeatCount="indefinite"/>
+  </text>
+  <!-- Status dot -->
+  <circle cx="143" cy="143" r="9" fill="#0a0a0f"/>
+  <circle cx="143" cy="143" r="6" fill="#10b981">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Name -->
+  <text x="185" y="85" font-family="'Segoe UI',Arial,sans-serif" font-size="32" font-weight="800" fill="url(#titleGrad)" filter="url(#glow)">Moe Kyaw Aung</text>
+
+  <!-- Subtitle with typing cursor -->
+  <text x="185" y="118" font-family="'Courier New',monospace" font-size="14" fill="#06b6d4" opacity="0.9">
+    Android Developer · Microsoft
+  </text>
+  <rect x="430" y="104" width="2" height="16" fill="#06b6d4">
+    <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Location -->
+  <text x="185" y="148" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#64748b">
+    📍 Tachileik, Myanmar 🇲🇲
+  </text>
+
+  <!-- Floating emojis right side -->
+  <text x="720" y="60" font-size="22" opacity="0.7">
+    🚀
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+  <text x="770" y="110" font-size="18" opacity="0.6">
+    ⚡
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="2.0s" repeatCount="indefinite"/>
+  </text>
+  <text x="730" y="155" font-size="20" opacity="0.65">
+    🔥
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-7;0,0" dur="3.0s" repeatCount="indefinite"/>
+  </text>
+</svg>
